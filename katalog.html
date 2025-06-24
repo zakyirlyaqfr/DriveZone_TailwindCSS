@@ -24,11 +24,11 @@
                 </div>
 
                 <div class="flex items-center space-x-4">
-                    <a href="keranjang.html" class="relative hover:text-red-500">
+                    <a href="keranjang.html" class="relative flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7A2 2 0 007.6 19h8.8a2 2 0 001.95-2.3L17 13M7 13V6a1 1 0 011-1h5a1 1 0 011 1v7" />
                         </svg>
-                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                        <span class="navbar-cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
                     </a>
                     <a href="profile.html" class="hover:text-red-500">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,18 +98,17 @@
     <!-- Cars Grid -->
     <div class="container mx-auto px-4 py-12">
         <div class="flex justify-between items-center mb-8">
-            <p class="text-gray-600">Menampilkan 24 dari 156 mobil</p>
+            <div></div>
             <div class="flex gap-2">
+                <!-- HAPUS: Tombol grid/list view (gambar yang Anda lampirkan) -->
+                <!--
                 <button class="p-2 border rounded hover:bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-                    </svg>
+                    <svg ...>...</svg>
                 </button>
                 <button class="p-2 border rounded hover:bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
-                    </svg>
+                    <svg ...>...</svg>
                 </button>
+                -->
             </div>
         </div>
 
@@ -119,31 +118,18 @@
                 <a href="katalog-detail.html">
                     <div class="relative h-48">
                         <img src="https://spots.ag/2025/03/08/ferrari-488-gtb-96e5d-c275808032025011405_1.jpg" alt="Ferrari 488" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute top-3 left-3">
+                        <!-- HAPUS: Badge Terbaru -->
+                        <!-- <div class="absolute top-3 left-3">
                             <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">Terbaru</span>
-                        </div>
-                        <div class="absolute top-3 right-3 flex gap-2">
-                            <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                </svg>
-                            </button>
-                            <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                                </svg>
-                            </button>
-                        </div>
+                        </div> -->
+                        <!-- HAPUS: Tombol love/share/compare -->
+                        <!-- <div class="absolute top-3 right-3 flex gap-2"> ... </div> -->
                     </div>
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-2">
                             <span class="text-sm text-gray-500">Ferrari</span>
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <span class="text-sm text-gray-500 ml-1">4.8</span>
-                            </div>
+                            <!-- HAPUS: Rating -->
+                            <!-- <div class="flex items-center"> ... </div> -->
                         </div>
                         <h3 class="text-lg font-bold mb-2">Ferrari 488 GTB</h3>
                         <p class="text-gray-600 text-sm mb-3">3.9L V8 Twin-Turbo • 661 HP • 2020</p>
@@ -162,28 +148,11 @@
                 <a href="katalog-detail.html">
                     <div class="relative h-48">
                         <img src="https://www.topgear.com/sites/default/files/cars-car/carousel/2019/01/tom_5656.jpg" alt="Lamborghini Huracan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute top-3 right-3 flex gap-2">
-                            <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                </svg>
-                            </button>
-                            <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                                </svg>
-                            </button>
-                        </div>
+                        <!-- HAPUS: Tombol love/share/compare -->
                     </div>
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-2">
                             <span class="text-sm text-gray-500">Lamborghini</span>
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <span class="text-sm text-gray-500 ml-1">4.9</span>
-                            </div>
                         </div>
                         <h3 class="text-lg font-bold mb-2">Lamborghini Huracan</h3>
                         <p class="text-gray-600 text-sm mb-3">5.2L V10 • 630 HP • 2021</p>
@@ -202,31 +171,15 @@
                 <a href="katalog-detail.html">
                     <div class="relative h-48">
                         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEim8j_72WSrYrOzFbcaJsO75ERTCgtDVB9NWov5AlOWbkS-tFD40Ru7H3nokjeBn8m772us1_7nluhyphenhyphenzo2pcBr8A_ecc-McuKHGbbuQWPfhZ6VDYvk5NNejADLsjri2m8GdrneBASnNRAJo/s1100/2021_porsche_911.jpg" alt="Porsche 911" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute top-3 left-3">
+                        <!-- HAPUS: Badge Populer -->
+                        <!-- <div class="absolute top-3 left-3">
                             <span class="bg-green-500 text-white text-xs px-2 py-1 rounded">Populer</span>
-                        </div>
-                        <div class="absolute top-3 right-3 flex gap-2">
-                            <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                </svg>
-                            </button>
-                            <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                                </svg>
-                            </button>
-                        </div>
+                        </div> -->
+                        <!-- HAPUS: Tombol love/share/compare -->
                     </div>
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-2">
                             <span class="text-sm text-gray-500">Porsche</span>
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <span class="text-sm text-gray-500 ml-1">4.7</span>
-                            </div>
                         </div>
                         <h3 class="text-lg font-bold mb-2">Porsche 911 Turbo S</h3>
                         <p class="text-gray-600 text-sm mb-3">3.8L H6 Twin-Turbo • 640 HP • 2022</p>
@@ -245,28 +198,11 @@
                 <a href="katalog-detail.html">
                     <div class="relative h-48">
                         <img src="https://th.bing.com/th/id/OIP.z2aJnFAj2VECeyVP8gfS0QHaE8?w=1200&h=800&rs=1&pid=ImgDetMain" alt="McLaren 720S" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute top-3 right-3 flex gap-2">
-                            <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                </svg>
-                            </button>
-                            <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                                </svg>
-                            </button>
-                        </div>
+                        <!-- HAPUS: Tombol love/share/compare -->
                     </div>
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-2">
                             <span class="text-sm text-gray-500">McLaren</span>
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <span class="text-sm text-gray-500 ml-1">4.6</span>
-                            </div>
                         </div>
                         <h3 class="text-lg font-bold mb-2">McLaren 720S</h3>
                         <p class="text-gray-600 text-sm mb-3">4.0L V8 Twin-Turbo • 710 HP • 2021</p>
@@ -280,34 +216,16 @@
                 </a>
             </div>
 
-            <!-- Repeat similar cards for more cars -->
-            <!-- Car Card 5-8 (similar structure) -->
+            <!-- Car Card 5 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
                 <a href="katalog-detail.html">
                     <div class="relative h-48">
                         <img src="https://th.bing.com/th/id/OIP.Pzehto_UgpHPR5OKyPrzsAHaEK?rs=1&pid=ImgDetMain" alt="Aston Martin DB11" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute top-3 right-3 flex gap-2">
-                            <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                </svg>
-                            </button>
-                            <button class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                                </svg>
-                            </button>
-                        </div>
+                        <!-- HAPUS: Tombol love/share/compare -->
                     </div>
                     <div class="p-4">
                         <div class="flex items-center justify-between mb-2">
                             <span class="text-sm text-gray-500">Aston Martin</span>
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                </svg>
-                                <span class="text-sm text-gray-500 ml-1">4.5</span>
-                            </div>
                         </div>
                         <h3 class="text-lg font-bold mb-2">Aston Martin DB11</h3>
                         <p class="text-gray-600 text-sm mb-3">5.2L V12 Twin-Turbo • 630 HP • 2020</p>
@@ -320,30 +238,9 @@
                     </div>
                 </a>
             </div>
-
-            <!-- Add more car cards as needed -->
+            <!-- ...existing code... -->
         </div>
-
-        <!-- Pagination -->
-        <div class="flex justify-center mt-12">
-            <nav class="flex items-center gap-1">
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md border hover:bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                    </svg>
-                </a>
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md border bg-red-500 text-white">1</a>
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md border hover:bg-gray-100">2</a>
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md border hover:bg-gray-100">3</a>
-                <span class="w-10 h-10 flex items-center justify-center">...</span>
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md border hover:bg-gray-100">12</a>
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md border hover:bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                </a>
-            </nav>
-        </div>
+        <!-- ...existing code... -->
     </div>
 
     <!-- Footer -->
@@ -393,5 +290,18 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Dummy filter aktif
+        document.querySelectorAll('select, input[type="text"]').forEach(el => {
+            el.addEventListener('change', filterCars);
+            el.addEventListener('input', filterCars);
+        });
+        function filterCars() {
+            // Dummy: tampilkan alert filter aktif (implementasi filter data sesuai kebutuhan)
+            // alert('Filter aktif! (Fitur filter dapat diimplementasikan sesuai kebutuhan)');
+            // Untuk demo, tidak melakukan apa-apa
+        }
+    </script>
 </body>
 </html>

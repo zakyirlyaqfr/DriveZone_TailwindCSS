@@ -255,13 +255,17 @@
             if (name && email && password && confirmPassword && terms) {
                 if (password === confirmPassword) {
                     if (password.length >= 8) {
-                        // Add loading state
+                        // Simpan ke localStorage
+                        localStorage.setItem('drivezone_user', JSON.stringify({
+                            name: name,
+                            email: email,
+                            provider: 'manual'
+                        }));
+                        // Loading state
                         const submitBtn = e.target.querySelector('button[type="submit"]');
                         const originalText = submitBtn.textContent;
                         submitBtn.textContent = 'Memproses...';
                         submitBtn.disabled = true;
-                        
-                        // Simulate API call
                         setTimeout(() => {
                             alert('Pendaftaran berhasil! Selamat datang di DriveZone.');
                             window.location.href = 'index.html';
@@ -274,6 +278,32 @@
                 }
             } else {
                 alert('Harap lengkapi semua kolom dan setujui syarat & ketentuan.');
+            }
+        });
+
+        // Register dengan Google & Facebook
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.textContent.includes('Google')) {
+                btn.onclick = function(e) {
+                    e.preventDefault();
+                    localStorage.setItem('drivezone_user', JSON.stringify({
+                        name: 'Google User',
+                        email: 'googleuser@email.com',
+                        provider: 'google'
+                    }));
+                    window.location.href = 'index.html';
+                }
+            }
+            if (btn.textContent.includes('Facebook')) {
+                btn.onclick = function(e) {
+                    e.preventDefault();
+                    localStorage.setItem('drivezone_user', JSON.stringify({
+                        name: 'Facebook User',
+                        email: 'fbuser@email.com',
+                        provider: 'facebook'
+                    }));
+                    window.location.href = 'index.html';
+                }
             }
         });
     </script>

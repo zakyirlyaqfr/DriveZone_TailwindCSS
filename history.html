@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="min-h-screen bg-gray-50">
+<body class="min-h-screen bg-gray-]50">
     <!-- Header/Navbar -->
     <header class="bg-black text-white shadow-md">
         <div class="container mx-auto px-4 py-4">
@@ -24,11 +24,11 @@
                 </div>
 
                 <div class="flex items-center space-x-4">
-                    <a href="keranjang.html" class="relative hover:text-red-500">
+                    <a href="keranjang.html" class="relative flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7A2 2 0 007.6 19h8.8a2 2 0 001.95-2.3L17 13M7 13V6a1 1 0 011-1h5a1 1 0 011 1v7" />
                         </svg>
-                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                        <span class="navbar-cart-count absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
                     </a>
                     <a href="profile.html" class="hover:text-red-500">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -44,234 +44,75 @@
     <div class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4">
             <h1 class="text-3xl font-bold">Riwayat Transaksi</h1>
-            <p class="text-gray-300 mt-2">Kelola dan pantau semua transaksi Anda</p>
         </div>
     </div>
 
     <div class="container mx-auto px-4 py-8">
-        <!-- Filter Tabs -->
-        <div class="bg-white rounded-lg shadow-sm mb-6">
-            <div class="border-b border-gray-200">
-                <nav class="-mb-px flex space-x-8 px-6">
-                    <button class="border-b-2 border-red-500 py-4 px-1 text-red-600 font-medium">Semua</button>
-                    <button class="border-b-2 border-transparent py-4 px-1 text-gray-500 hover:text-gray-700 hover:border-gray-300">Menunggu Pembayaran</button>
-                    <button class="border-b-2 border-transparent py-4 px-1 text-gray-500 hover:text-gray-700 hover:border-gray-300">Diproses</button>
-                    <button class="border-b-2 border-transparent py-4 px-1 text-gray-500 hover:text-gray-700 hover:border-gray-300">Selesai</button>
-                    <button class="border-b-2 border-transparent py-4 px-1 text-gray-500 hover:text-gray-700 hover:border-gray-300">Dibatalkan</button>
-                </nav>
-            </div>
-        </div>
-
-        <!-- Transaction List -->
-        <div class="space-y-6">
-            <!-- Transaction 1 -->
-            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                <div class="p-6 border-b bg-gray-50">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between">
-                        <div>
-                            <div class="flex items-center gap-4 mb-2">
-                                <h3 class="font-bold text-lg">Order #DZ-2023-001</h3>
-                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Selesai</span>
-                            </div>
-                            <p class="text-gray-600">Tanggal: 15 November 2023</p>
-                        </div>
-                        <div class="mt-4 md:mt-0 text-right">
-                            <div class="text-2xl font-bold text-red-500">Rp 8.500.000.000</div>
-                            <p class="text-gray-600">1 item</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="p-6">
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <div class="w-full md:w-32 h-24 flex-shrink-0">
-                            <img src="https://spots.ag/2025/03/08/ferrari-488-gtb-96e5d-c275808032025011405_1.jpg" alt="Ferrari 488" class="w-full h-full object-cover rounded">
-                        </div>
-                        <div class="flex-grow">
-                            <h4 class="font-bold text-lg mb-1">Ferrari 488 GTB</h4>
-                            <p class="text-gray-600 mb-2">3.9L V8 Twin-Turbo • 661 HP • 2020</p>
-                            <p class="text-sm text-gray-500 mb-3">Warna: Rosso Corsa Red</p>
-                            
-                            <!-- Status Timeline -->
-                            <div class="flex items-center text-sm text-gray-600 mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    <span class="ml-2">Pesanan Dibuat</span>
-                                </div>
-                                <div class="flex-1 h-px bg-green-500 mx-4"></div>
-                                <div class="flex items-center">
-                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    <span class="ml-2">Pembayaran Dikonfirmasi</span>
-                                </div>
-                                <div class="flex-1 h-px bg-green-500 mx-4"></div>
-                                <div class="flex items-center">
-                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    <span class="ml-2">Mobil Disiapkan</span>
-                                </div>
-                                <div class="flex-1 h-px bg-green-500 mx-4"></div>
-                                <div class="flex items-center">
-                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    <span class="ml-2">Selesai</span>
-                                </div>
-                            </div>
-                            
-                            <div class="flex gap-3">
-                                <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded text-sm transition-colors">
-                                    Lihat Detail
-                                </button>
-                                <button class="border border-gray-300 hover:border-red-500 text-gray-700 px-4 py-2 rounded text-sm transition-colors">
-                                    Unduh Invoice
-                                </button>
-                                <button class="border border-gray-300 hover:border-red-500 text-gray-700 px-4 py-2 rounded text-sm transition-colors">
-                                    Beli Lagi
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Transaction 2 -->
-            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                <div class="p-6 border-b bg-gray-50">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between">
-                        <div>
-                            <div class="flex items-center gap-4 mb-2">
-                                <h3 class="font-bold text-lg">Order #DZ-2023-002</h3>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Diproses</span>
-                            </div>
-                            <p class="text-gray-600">Tanggal: 20 November 2023</p>
-                        </div>
-                        <div class="mt-4 md:mt-0 text-right">
-                            <div class="text-2xl font-bold text-red-500">Rp 4.800.000.000</div>
-                            <p class="text-gray-600">1 item</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="p-6">
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <div class="w-full md:w-32 h-24 flex-shrink-0">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEim8j_72WSrYrOzFbcaJsO75ERTCgtDVB9NWov5AlOWbkS-tFD40Ru7H3nokjeBn8m772us1_7nluhyphenhyphenzo2pcBr8A_ecc-McuKHGbbuQWPfhZ6VDYvk5NNejADLsjri2m8GdrneBASnNRAJo/s1100/2021_porsche_911.jpg" alt="Porsche 911" class="w-full h-full object-cover rounded">
-                        </div>
-                        <div class="flex-grow">
-                            <h4 class="font-bold text-lg mb-1">Porsche 911 Turbo S</h4>
-                            <p class="text-gray-600 mb-2">3.8L H6 Twin-Turbo • 640 HP • 2022</p>
-                            <p class="text-sm text-gray-500 mb-3">Warna: Guards Red</p>
-                            
-                            <!-- Status Timeline -->
-                            <div class="flex items-center text-sm text-gray-600 mb-4">
-                                <div class="flex items-center">
-                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    <span class="ml-2">Pesanan Dibuat</span>
-                                </div>
-                                <div class="flex-1 h-px bg-green-500 mx-4"></div>
-                                <div class="flex items-center">
-                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                                    <span class="ml-2">Pembayaran Dikonfirmasi</span>
-                                </div>
-                                <div class="flex-1 h-px bg-blue-500 mx-4"></div>
-                                <div class="flex items-center">
-                                    <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
-                                    <span class="ml-2">Mobil Disiapkan</span>
-                                </div>
-                                <div class="flex-1 h-px bg-gray-300 mx-4"></div>
-                                <div class="flex items-center">
-                                    <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
-                                    <span class="ml-2">Selesai</span>
-                                </div>
-                            </div>
-                            
-                            <div class="flex gap-3">
-                                <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded text-sm transition-colors">
-                                    Lihat Detail
-                                </button>
-                                <button class="border border-gray-300 hover:border-red-500 text-gray-700 px-4 py-2 rounded text-sm transition-colors">
-                                    Hubungi Sales
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Transaction 3 -->
-            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                <div class="p-6 border-b bg-gray-50">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between">
-                        <div>
-                            <div class="flex items-center gap-4 mb-2">
-                                <h3 class="font-bold text-lg">Order #DZ-2023-003</h3>
-                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Menunggu Pembayaran</span>
-                            </div>
-                            <p class="text-gray-600">Tanggal: 22 November 2023</p>
-                        </div>
-                        <div class="mt-4 md:mt-0 text-right">
-                            <div class="text-2xl font-bold text-red-500">Rp 9.200.000.000</div>
-                            <p class="text-gray-600">1 item</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="p-6">
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <div class="w-full md:w-32 h-24 flex-shrink-0">
-                            <img src="https://www.topgear.com/sites/default/files/cars-car/carousel/2019/01/tom_5656.jpg" alt="Lamborghini Huracan" class="w-full h-full object-cover rounded">
-                        </div>
-                        <div class="flex-grow">
-                            <h4 class="font-bold text-lg mb-1">Lamborghini Huracan</h4>
-                            <p class="text-gray-600 mb-2">5.2L V10 • 630 HP • 2021</p>
-                            <p class="text-sm text-gray-500 mb-3">Warna: Arancio Borealis</p>
-                            
-                            <!-- Payment Warning -->
-                            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-4">
-                                <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
-                                    </svg>
-                                    <span class="text-yellow-800 text-sm">Selesaikan pembayaran sebelum 25 November 2023</span>
-                                </div>
-                            </div>
-                            
-                            <div class="flex gap-3">
-                                <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded text-sm transition-colors">
-                                    Bayar Sekarang
-                                </button>
-                                <button class="border border-gray-300 hover:border-red-500 text-gray-700 px-4 py-2 rounded text-sm transition-colors">
-                                    Lihat Detail
-                                </button>
-                                <button class="border border-red-300 hover:border-red-500 text-red-600 px-4 py-2 rounded text-sm transition-colors">
-                                    Batalkan
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pagination -->
-        <div class="flex justify-center mt-12">
-            <nav class="flex items-center gap-1">
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md border hover:bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                    </svg>
-                </a>
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md border bg-red-500 text-white">1</a>
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md border hover:bg-gray-100">2</a>
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md border hover:bg-gray-100">3</a>
-                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md border hover:bg-gray-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                </a>
-            </nav>
-        </div>
+        <div id="history-list" class="space-y-8"></div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white py-12 mt-12">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const historyList = document.getElementById('history-list');
+        // Ambil data history dari localStorage
+        let history = [];
+        try {
+            history = JSON.parse(localStorage.getItem('history')) || [];
+        } catch {
+            history = [];
+        }
+
+        if (!history.length) {
+            historyList.innerHTML = `<div class="text-center text-gray-500 py-12">Belum ada transaksi.</div>`;
+            return;
+        }
+
+        history.forEach(order => {
+            let itemsHtml = order.items.map(item => `
+                <div class="flex items-center gap-4 mb-2">
+                    <img src="${item.img || 'https://via.placeholder.com/64x48?text=No+Image'}" alt="${item.name}" class="w-16 h-12 object-cover rounded">
+                    <div>
+                        <div class="font-semibold">${item.name}</div>
+                        <div class="text-sm text-gray-600">Warna: ${item.color || '-'}</div>
+                        <div class="text-sm">Qty: ${item.qty}</div>
+                        <div class="text-sm text-red-500 font-bold">Rp ${(item.price * item.qty).toLocaleString('id-ID')}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            historyList.innerHTML += `
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <div>
+                            <div class="font-bold text-lg text-red-600 mb-1">#${order.orderNumber}</div>
+                            <div class="text-gray-500 text-sm mb-1">${order.orderDate}</div>
+                            <div class="text-sm text-gray-700">Metode: <span class="font-medium">${order.paymentMethod.replace('_', ' ').toUpperCase()}</span></div>
+                        </div>
+                        <div class="mt-2 md:mt-0">
+                            <span class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Selesai</span>
+                        </div>
+                    </div>
+                    <div class="mb-4 border-b pb-4">
+                        ${itemsHtml}
+                    </div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2">
+                        <div class="text-sm text-gray-600">
+                            <div><span class="font-medium">Nama:</span> ${order.deliveryInfo.fullName}</div>
+                            <div><span class="font-medium">Alamat:</span> ${order.deliveryInfo.address}, ${order.deliveryInfo.city}, ${order.deliveryInfo.province}, ${order.deliveryInfo.postalCode}</div>
+                            <div><span class="font-medium">Telp:</span> ${order.deliveryInfo.phone}</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="font-bold text-lg text-red-500">Total: Rp ${order.total.toLocaleString('id-ID')}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+    });
+    </script>
+</body>
+<!-- ...existing code di bawah... -->
+<footer class="bg-black text-white py-12 mt-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
@@ -317,5 +158,4 @@
             </div>
         </div>
     </footer>
-</body>
 </html>

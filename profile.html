@@ -25,7 +25,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
                         </svg>
-                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center navbar-cart-count">0</span>
                     </a>
                     <a href="profile.html" class="text-red-500">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -68,7 +68,7 @@
                     <a href="#security" class="block py-2 px-4 text-gray-600 hover:text-red-500 profile-nav-item">Keamanan</a>
                     <a href="history.html" class="block py-2 px-4 text-gray-600 hover:text-red-500 profile-nav-item">Riwayat Transaksi</a>
                     <a href="wishlist.html" class="block py-2 px-4 text-gray-600 hover:text-red-500 profile-nav-item">Wishlist</a>
-                    <a href="admin-dashboard.html" class="block py-2 px-4 text-gray-600 hover:text-red-500 profile-nav-item">Admin</a>
+                    <!-- <a href="admin-dashboard.html" class="block py-2 px-4 text-gray-600 hover:text-red-500 profile-nav-item">Admin</a> -->
                     <a href="landingpage.html" class="block py-2 px-4 text-gray-600 hover:text-red-500 profile-nav-item logout">Keluar</a>
                 </nav>
             </div>
@@ -345,6 +345,31 @@
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Ambil data user dari localStorage dan tampilkan
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = JSON.parse(localStorage.getItem('drivezone_user'));
+            if (user) {
+                // Ganti nama dan email di sidebar
+                document.querySelector('.p-6.border-b.text-center h3').textContent = user.name || 'User';
+                document.querySelector('.p-6.border-b.text-center p').textContent = user.email || '-';
+                // Ganti value di form
+                if (document.getElementById('firstName')) {
+                    const nameArr = user.name ? user.name.split(' ') : ['User'];
+                    document.getElementById('firstName').value = nameArr[0] || '';
+                    document.getElementById('lastName').value = nameArr.slice(1).join(' ') || '';
+                }
+                if (document.getElementById('email')) {
+                    document.getElementById('email').value = user.email || '';
+                }
+            }
+            // Logout: hapus localStorage
+            document.querySelectorAll('.logout').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    localStorage.removeItem('drivezone_user');
+                });
+            });
         });
     </script>
 </body>
